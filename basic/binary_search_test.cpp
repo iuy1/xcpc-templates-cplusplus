@@ -19,8 +19,11 @@ TEST(BinarySearch, EmptyRange) {
 
 TEST(BinarySearch, Normal) {
   auto gt = [](int a) {
-    return [a](int x) { return x >= a; };
+    return [a](int x) {
+      return x >= a;
+    };
   };
+
   EXPECT_EQ(binary_search(0, 5, gt(-1)), 0);
   EXPECT_EQ(binary_search(0, 5, gt(0)), 0);
   EXPECT_EQ(binary_search(0, 5, gt(1)), 1);
@@ -37,7 +40,9 @@ TEST(BinarySearch, Negtive) {
   EXPECT_EQ((-2 + -1) / 2, -1);
 
   auto gt = [](int a) {
-    return [a](int x) { return x >= a; };
+    return [a](int x) {
+      return x >= a;
+    };
   };
 
   EXPECT_EQ(binary_search(-2, -1, gt(-1)), -1);
@@ -69,7 +74,7 @@ TEST(BinarySearch, CallsRequired) {
   }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
