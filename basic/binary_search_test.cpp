@@ -70,7 +70,7 @@ TEST(BinarySearch, CallsRequired) {
     visit.clear();
     binary_search(0, 7, gt(3));
     vector exp{3, 1, 2};
-    EXPECT_EQ(visit, exp) << format("{}", visit);
+    EXPECT_EQ(visit, exp);
   }
 }
 
