@@ -6,6 +6,10 @@
     {
       "name": "gtest",
       "version>=": "1.17.0#1"
+    },
+    {
+      "name": "benchmark",
+      "version>=": "1.9.2"
     }
   ]
 }
