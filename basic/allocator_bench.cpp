@@ -22,7 +22,7 @@ public:
   void SetUp(const benchmark::State& state) override {
     size_t size = state.range(0);
     order.resize(size);
-    ranges::iota(order, 0);
+    iota(order.begin(), order.end(), 0);
     mt19937_64 rng(size);
     ranges::shuffle(order, rng);
   }
