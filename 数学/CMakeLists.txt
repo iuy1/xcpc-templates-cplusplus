@@ -12,3 +12,6 @@ add_test(NAME mersenne_mod_test COMMAND mersenne_mod_test)
 add_executable(mod_bench mod_bench.cpp)
 target_link_libraries(mod_bench benchmark::benchmark)
 
+add_executable(modint_test modint_test.cpp)
+target_link_libraries(modint_test GTest::GTest)
+add_test(NAME modint_test COMMAND modint_test)
